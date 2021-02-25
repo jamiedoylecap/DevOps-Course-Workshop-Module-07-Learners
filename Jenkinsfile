@@ -12,5 +12,15 @@ pipeline {
                 sh 'dotnet build'
             }
         }
+        stage('NPM') {
+            agent {
+                docker { image 'node:14-alpine' }
+            }
+            steps {
+                sh 'node --version'
+                sh 'npm install'
+            }
+        }
     }
+    
 }
