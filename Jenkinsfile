@@ -8,7 +8,8 @@ pipeline {
             steps {
                 sh 'ls'
                 sh 'pwd'
-                sh 'sudo dotnet build'
+                sh 'cd DotnetTemplate.Web'
+                sh 'dotnet build'
             }
         }
     }
