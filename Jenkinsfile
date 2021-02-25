@@ -6,7 +6,7 @@ pipeline {
                 docker { image 'mcr.microsoft.com/dotnet/sdk:5.0' }
             }
             steps {
-                sh 'ls'
+                sh 'ls -all'
                 sh 'pwd'
                 sh 'cd DotnetTemplate.Web'
                 sh 'dotnet build'
