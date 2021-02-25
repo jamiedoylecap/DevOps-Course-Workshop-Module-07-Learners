@@ -10,7 +10,7 @@ pipeline {
             }
             steps {
                 sh 'echo DOTNET'
-                sh 'dotnet build && cd DotnetTemplate.Web && dotnet test'
+                sh 'dotnet build && dotnet test'
             }
         }
         stage('NPM') {
