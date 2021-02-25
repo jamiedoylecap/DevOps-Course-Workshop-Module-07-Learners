@@ -18,8 +18,7 @@ pipeline {
             }
             steps {
                 sh 'node --version'
-                sh 'cd DotnetTemplate.Web'
-                sh 'npm install'
+                sh 'cd DotnetTemplate.Web && npm install'
                 sh 'ls -all'
                 sh 'pwd'
                 sh 'npm run build'
