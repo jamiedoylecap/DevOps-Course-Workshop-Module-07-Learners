@@ -18,4 +18,8 @@ jobs:
     - run: npm run build
       working-directory: ./DotnetTemplate.Web
     - run: dotnet test
+    - run: npm t
+      working-directory: ./DotnetTemplate.Web
+    - run: npm run lint
+      working-directory: ./DotnetTemplate.Web
     
