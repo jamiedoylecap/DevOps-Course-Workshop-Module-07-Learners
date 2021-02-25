@@ -12,14 +12,20 @@ jobs:
     - uses: actions/setup-dotnet@v1
       with:
         dotnet-version: '3.1.x' # SDK Version to use; x will use the latest version of the 3.1 channel
-    - run: dotnet build DotnetTemplate.Web
-    - run: npm install
+    - name: BUILD - .NET
+      run: dotnet build DotnetTemplate.Web
+    - name: BUILD - install NPM
+      run: npm install
       working-directory: ./DotnetTemplate.Web
-    - run: npm run build
+    - name: BUILD - NPM run build
+      run: npm run build
       working-directory: ./DotnetTemplate.Web
-    - run: dotnet test
-    - run: npm t
+    - name: TEST - c# tests run from DotnetTemplate.Web.Tests project.
+      run: dotnet test
+    - name: TEST - typescript tests run using Jasmine
+      run: npm t
       working-directory: ./DotnetTemplate.Web
-    - run: npm run lint
+    - name: TEST - run linting on the typescript code, using eslint.
+      run: npm run lint
       working-directory: ./DotnetTemplate.Web
     
