@@ -9,6 +9,7 @@ pipeline {
                 docker { image 'mcr.microsoft.com/dotnet/sdk:5.0' }
             }
             steps {
+                sh 'echo DOTNET'
                 sh 'dotnet build && cd DotnetTemplate.Web && dotnet test'
             }
         }
