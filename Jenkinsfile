@@ -9,7 +9,6 @@ pipeline {
                 sh 'ls -all'
                 sh 'pwd'
                 sh 'whoami'
-                sh 'dotnet build'
             }
         }
         stage('NPM') {
