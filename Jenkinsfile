@@ -19,7 +19,7 @@ pipeline {
             }
             steps {
                 sh 'node --version'
-                sh 'cd DotnetTemplate.Web && npm install && npm run build'
+                sh 'cd DotnetTemplate.Web && npm install && npm run build && npm t && npm run lint'
             }
         }
     }
