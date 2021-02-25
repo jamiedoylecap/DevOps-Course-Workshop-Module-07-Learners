@@ -1,5 +1,8 @@
 pipeline {
     agent none
+    environment {
+        DOTNET_CLI_HOME = '/tmp'
+        }
     stages {
         stage('dotnet') {
             agent {
@@ -8,6 +11,7 @@ pipeline {
             steps {
                 sh 'ls -all'
                 sh 'pwd'
+                sh 'dotnet build'
             }
         }
         stage('NPM') {
