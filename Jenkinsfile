@@ -8,7 +8,7 @@ pipeline {
             steps {
                 sh 'ls -all'
                 sh 'pwd'
-                sh 'cd DotnetTemplate.Web'
+                sh 'whoami'
                 sh 'dotnet build'
             }
         }
