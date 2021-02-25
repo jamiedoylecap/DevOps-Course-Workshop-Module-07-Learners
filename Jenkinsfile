@@ -8,7 +8,6 @@ pipeline {
             steps {
                 sh 'ls -all'
                 sh 'pwd'
-                sh 'whoami'
             }
         }
         stage('NPM') {
