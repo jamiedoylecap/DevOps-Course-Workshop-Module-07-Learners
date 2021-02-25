@@ -21,6 +21,7 @@ pipeline {
             steps {
                 sh 'node --version'
                 sh 'npm install'
+                sh 'cd DotnetTemplate.Web'
                 sh 'npm run build'
             }
         }
